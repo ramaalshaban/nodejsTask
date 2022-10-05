@@ -7,8 +7,8 @@ const router = express.Router();
 const adminController = require("../controllers/admin");
 
 router.post('/',userRole,adminController.addEmployee);
-router.post('/:id/delete',userRole, adminController.deleteEmployee);
-router.post('/:id/update',userRole, adminController.updateEmployee);
+router.delete('/:id',userRole, adminController.deleteEmployee);
+router.patch('/:id',userRole, adminController.updateEmployee);
 
 
 module.exports = router;
